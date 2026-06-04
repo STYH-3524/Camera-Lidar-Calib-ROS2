@@ -2,15 +2,35 @@ fast_calib:
   ros__parameters:
     # Camera intrinsics  
     # mid360
-    fx: 522.123514287681
-    fy: 522.275153384482
-    cx: 773.466430504725
-    cy: 534.053165700174
-    k1: 0.00324949759262203
-    k2: -0.0171040538369167
-    p1: 0.000669657443377146
-    p2: -0.000350205468789575
 
+
+    # fx: 923.4034
+    # fy: 925.2471
+    # cx: 746.4775
+    # cy: 522.8032
+    # k1: -0.4546
+    # k2: 0.2274
+    # p1: -0.0021
+    # p2: -0.0001
+
+    fx: 919.2044019010920
+    fy: 919.8361545114842
+    cx: 736.9118791391100
+    cy: 533.7101367461894
+    k1: -0.457344962446516
+    k2: 0.284055239372255
+    p1: -0.002201631328247
+    p2: 0.001359177130945
+  
+    # fx: 522.123514287681
+    # fy: 522.275153384482
+    # cx: 773.466430504725
+    # cy: 534.053165700174
+    # k1: 0.00324949759262203
+    # k2: -0.0171040538369167
+    # p1: 0.000669657443377146
+    # p2: -0.000350205468789575
+   
     # avia
     # fx: 1215.31801774424
     # fy: 1214.72961288138
@@ -40,17 +60,28 @@ fast_calib:
     circle_radius: 0.12 # Radius of the circle 
 
     # Distance filter
-    x_min: 1.5
-    x_max: 3.0
-    y_min: -1.5
-    y_max: 2.0
+    x_min: -2.2
+    x_max: -1.2
+    y_min: -0.75
+    y_max: 0.3
     z_min: -0.5 # avia and mid360: -0.5 ouster: -0.8
     z_max: 2.0
 
+    # x_min: 1.5
+    # x_max: 3.0
+    # y_min: -1.5
+    # y_max: 2.0
+    # z_min: -0.5 # avia and mid360: -0.5 ouster: -0.8
+    # z_max: 2.0
+
+   
+
+
     # Input
     lidar_topic: "/livox/lidar" # /ouster/points /livox/lidar
-    bag_path: "/modify/path/FAST-Calib-ROS2/calib_data/mid360_11"
-    image_path: "/modify/path/FAST-Calib-ROS2/calib_data/mid360_11/11.png"
+    bag_path: "/home/styh/calib_ws/src/FAST-Calib-ROS2/calib_data/mid360/0603_1/bag"
+    image_path: "/home/styh/calib_ws/src/FAST-Calib-ROS2/calib_data/mid360/0603_1/calib_image.png"
 
     # Output
-    output_path: "/modify/path/FAST-Calib-ROS2/output"
+    output_path: "/home/styh/calib_ws/src/FAST-Calib-ROS2/calib_data/mid360/0603_1"
+
